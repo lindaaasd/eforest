@@ -1,0 +1,87 @@
+﻿@page
+@{
+}
+<main>
+
+    <!-- MASTHEAD -->
+
+    <section class="container-fluid header-home-eforest">
+        <header class="row header-row-home">
+            <div class="col-12 d-flex align-items-center justify-content-center my-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center text-white display-2 header-title-home fw-bold"> Un nou cartier multifunctional </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <!-- Quote -->
+
+    <section class="text-center">
+        eForest este un cartier contemporan, un „parc locuit” în slujba orașului.
+        Un proiect modern de reamenajare urbană și peisagistică care transformă zona prin generarea unui nou peisaj.
+        Un nou loc de locuit, nu numai pentru rezidenți, ci și pentru toți cetățenii.
+    </section>
+
+    <!-- servicii -->
+
+    <section class="container-fluid w-100 py-5">
+        <h2 class="text-center title-section py-2"> Galeria de imagini </h2>
+
+        <!-- Gallery -->
+        <!-- Images used to open the lightbox -->
+        <div class="row gallery-row">
+            <div class="gallery-column">
+                <img src="./media/ciprian.jpeg" onclick="openModal();currentSlide(1)" class="img-fluid hover-shadow">
+            </div>
+            <div class="gallery-column">
+                <img src="./media/ciprian.jpeg" onclick="openModal();currentSlide(2)" class="img-fluid hover-shadow">
+            </div>
+            <div class="gallery-column">
+                <img src="./media/ciprian.jpeg" onclick="openModal();currentSlide(3)" class="img-fluid hover-shadow">
+            </div>
+            <div class="gallery-column">
+                <img src="./media/ciprian.jpeg" onclick="openModal();currentSlide(4)" class="img-fluid hover-shadow">
+            </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal-gallery" style="z-index:1070">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img class="img-fluid" src="./media/ciprian.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img class="img-fluid" src="./media/ciprian.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img class="img-fluid" src="./media/ciprian.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img class="img-fluid" src="./media/ciprian.jpeg" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+        </div>
+
+    </section>
+</main>
+
+
+
+

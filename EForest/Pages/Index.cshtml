@@ -1,0 +1,306 @@
+﻿@page
+@using EForest.Pages;
+@model IndexModel
+@{
+    ViewData["Title"] = "eForest";
+}
+
+<!-- MASTHEAD -->
+
+<section class="container-fluid header-home m-0 p-0">
+    <header class="row header-row-home">
+        <div class="col-12 d-flex align-items-center justify-content-center my-5">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center display-2 header-title-home fw-bold"> <img class="img-fluid" src="/media/Logo_eForest.png" alt=""> </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+</section>
+
+<main>
+    <section class="container-fluid">
+        <div class="row" id="counter">
+            <div class="col-12">
+                <h1 class="text-center display-2 p-3"> Se naste eForest </h1>
+                <h3 class="text-center pb-5"> Casa ta noua, intr-un oras-gradina contemporan, conectat cu restul orasului </h3>
+            </div>
+            <div class="col-12 py-5">
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        <i class="fa-solid fa-4x fa-tree d-flex justify-content-center"></i>
+                        <h5 class="text-center py-3"> <div class="counter" id="valueParc"> <strong> 0 </strong> </div>  hectare de padure </h5>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <i class="fa-solid fa-4x fa-house-chimney d-flex justify-content-center"></i>
+                        <h5 class="text-center py-3"> <div class="counter" id="valueComercial"> <strong> 0 </strong> </div>  loturi de case noi </h5>
+                    </div>
+                    @*<div class="col-6 col-md-3">
+                            <i class="fa-solid fa-4x fa-house d-flex justify-content-center"></i>
+                            <h5 class="text-center py-3"> <div class="counter" id="valueCase"> <strong> 0 </strong> </div> de case noi </h5>
+                        </div>*@
+                    <div class="col-6 col-md-4">
+                        <i class="fa-solid fa-4x fa-city d-flex justify-content-center"></i>
+                        <h5 class="text-center py-3"> <div class="counter" id="valueOras"> <strong> 0 </strong> </div> minute de la Piata Victoriei  </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP WITH LOCATION -->
+
+    <section class="contaner-fluid m-0 p-0">
+
+        <img class="img-fluid" src="/media/hartaLocatie.jpeg" alt="">
+
+    </section>
+
+    <!-- TWO ARTICLES WITH PHOTOS -->
+
+    <section class="container-fluid my-5">
+        <h2 class="display-3 py-5 text-center title-section">LOREM</h2>
+        <div class="row py-3">
+            <div class="col-12 col-md-6 px-3">
+                <img class="img-fluid img-section" src="/media/greenNeigh1.jpg" alt="">
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center">
+                <div class="row px-4">
+                    <h3 class="text-center title-section pt-4"> Lorem Ipsum </h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quam rerum id architecto?
+                        Quas natus, debitis architecto quisquam reiciendis aliquid modi molestiae doloribus error ipsum est praesentium dolor placeat esse.
+                    </p>
+
+                    <div class="container d-flex justify-content-center w-100 py-5">
+                        <div class="col-4 col-md-4 text-center">
+                            <i class="fa-brands fa-2xl fa-android"></i>
+                            <p class="text-center"> Lorem Ipsum </p>
+                        </div>
+                        <div class="col-4 col-md-4 text-center">
+                            <i class="fa-brands fa-2xl fa-angellist"></i>
+                            <p class="text-center"> Lorem Ipsum </p>
+                        </div>
+                        <div class="col-4 col-md-4 text-center">
+                            <i class="fa-solid fa-2xl fa-ankh"></i>
+                            <p class="text-center"> Lorem Ipsum </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center">
+                <div class="row px-4 order-xs-2 order-md-2">
+                    <h3 class="text-center title-section pt-4"> Lorem Ipsum </h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quam rerum id architecto? Quas natus, debitis architecto quisquam reiciendis aliquid modi molestiae doloribus error ipsum est praesentium dolor placeat esse. </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 px-3 order-xs-1 order-md-1">
+                <img class="img-fluid img-section" src="/media/greenNeigh2.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY INFO IN ICONS -->
+
+    <section>
+        <img class="img-fluid w-100" src="/media/eforest-map.jpg" alt="loturi" />
+    </section>
+
+    <section class="container-fluid whyUs-ctn py-3 w-100">
+        <h2 class="display-3 py-5 text-center title-section">De ce noi? </h2>
+        <article class="row justify-content-center">
+            <div class="col-12 col-md-4 col-lg-4 pt-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <i class="fa-solid fa-4x text-center fa-clipboard-list pt-2"></i>
+                    <div class="card-body">
+                        <h5 class="card-title text-truncate">Ghid util dupa vanzare</h5>
+                        <ul>
+                            <li>Oferim un ghid complet pentru obtinerea autorizatie de constructie</li>
+                            <li>
+                                Iti dam contactele necesare a tuturor institutiilor cu care va trebui sa comunici
+                            </li>
+                            <li>
+                                Vei avea toate informatiile necesare in legatura cu programul de functionare al fiecarei institutii
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 pt-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <i class="fa-regular fa-4x fa-circle-check text-center pt-2"></i>
+                    <div class="card-body">
+                        <h5 class="card-title text-truncate">Autorizatia de construire</h5>
+                        <ul>
+                            <li> Pachet complet: 400€ </li>
+                            <li>
+                                Primiți autorizația de construcție acasă, prin Fan Curier sau o ridicați de la sediul nostru din Piața Victoriei
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 pt-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <i class="fa-brands fa-4x text-center fa-watchman-monitoring pt-2"></i>
+                    <div class="card-body">
+                        <h5 class="card-title text-truncate">Oferta de constructie</h5>
+                        <ul>
+                            <li> Monitorizare video non-stop  a constructiei</li>
+                            <li>
+                                Înregistrarea video a întregului proces de construcție
+                            </li>
+                            <li>
+                                Diriginte de șantier care urmarește evoluția lucrării
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- FLIP CARDS UNITS -->
+    <hgroup class="flipCards-ctn pb-5 text-white">
+        <h2 class="display-3 py-5 text-center">Comfortul din eForest</h2>
+        <p class="text-center text-white mx-5 display-6">eForest e un cartier proiectat pentru a oferi un nou mod de a trai si de a lucra, in termeni de comfort si wellbeing, siguranta si eco sostenibilitate </p>
+    </hgroup>
+
+    <section id="section-feature" class="container">
+        <div class="row">
+            <ul>
+                <li id="sf-innovation" class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="sf-wrap">
+                        <div class="sf-mdl-left">
+                            <div class="sf-icon">
+                                <i class="fa-solid fa-video fa-5x"></i>
+                            </div>
+                            <h3>Sistem de supraveghere</h3>
+                        </div>
+                        <div class="sf-mdl-right">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-video fa-5x"></i>
+                            </div>
+                            <h3>Sistem de supraveghere</h3>
+                        </div>
+
+                        <div class="sf-mdl-left-full">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-video fa-5x text-light"></i>
+                            </div>
+                            <h3>Sistem de supraveghere</h3>
+                            <p> Toate terenurile sunt prevazute cu supraveghere 24/7 de catre o firma privata de incredere </p>
+                        </div>
+                        <div class="sf-mdl-right-full">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-video fa-5x text-light"></i>
+                            </div>
+                            <h3>Sistem de supraveghere</h3>
+                            <p>Toate terenurile sunt prevazute cu supraveghere 24/7 de catre o firma privata de incredere</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li id="sf-community" class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="sf-wrap">
+                        <div class="sf-mdl-left">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-charging-station fa-5x"></i>
+                            </div>
+                            <h3>Statii de incarcare </h3>
+                        </div>
+                        <div class="sf-mdl-right">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-charging-station fa-5x"></i>
+                            </div>
+                            <h3>Statii de incarcare </h3>
+                        </div>
+
+                        <div class="sf-mdl-left-full">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-charging-station text-light fa-5x"></i>
+                            </div>
+                            <h3>Statii de incarcare </h3>
+                            <p> Daca ai o masina electrica, vei avea o statie de incarcare in imediata vicinanta, chiar in cartier </p>
+                        </div>
+                        <div class="sf-mdl-right-full">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-charging-station text-light fa-5x"></i>
+                            </div>
+                            <h3>Statii de incarcare </h3>
+                            <p>Daca ai o masina electrica, vei avea o statie de incarcare in imediata vicinanta, chiar in cartier</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li id="sf-academy" class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="sf-wrap">
+                        <div class="sf-mdl-left">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-dog fa-5x"></i>
+                            </div>
+                            <h3> Dog park </h3>
+                        </div>
+                        <div class="sf-mdl-right">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-dog fa-5x"></i>
+                            </div>
+                            <h3> Dog park </h3>
+                        </div>
+                        <div class="sf-mdl-left-full">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-dog fa-5x text-white"></i>
+                            </div>
+                            <h3> Dog park </h3>
+                            <p> Este amenajat un parc dedicat celor mai buni amici ai oamenilor, cu o fantana de apa, cateva jocuri de agility si multa umbra </p>
+                        </div>
+                        <div class="sf-mdl-right-full">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-dog fa-5x text-white"></i>
+                            </div>
+                            <h3> Dog park </h3>
+                            <p>Este amenajat un parc dedicat celor mai buni amici ai oamenilor, cu o fantana de apa, cateva jocuri de agility si multa umbra </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li id="sf-opportunity" class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="sf-wrap">
+                        <div class="sf-mdl-left">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-child fa-5x"></i>
+                            </div>
+                            <h3>Zona de joaca </h3>
+                        </div>
+                        <div class="sf-mdl-right">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-child fa-5x"></i>
+                            </div>
+                            <h3>Zona de joaca </h3>
+                        </div>
+
+                        <div class="sf-mdl-left-full">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-child text-white fa-5x"></i>
+                            </div>
+                            <h3>Zona de joaca</h3>
+                            <p> Pentru cei mai mici si nu chiar bla bla ba sdfadsfgsdfag sdfadgadga </p>
+                        </div>
+                        <div class="sf-mdl-right-full">
+                            <div class="sf-icon">
+                                <i class="fa fa-fw fa-child text-white fa-5x"></i>
+                            </div>
+                            <h3>Zona de joaca</h3>
+                            <p>Pentru cei mai mici si nu chiar bla bla ba sdfadsfgsdfag sdfadgadga .</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+

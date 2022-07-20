@@ -1,0 +1,183 @@
+﻿@using EForest.Pages;
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GOOGLE FONTS -->
+
+    <title>@ViewData["Title"] - EForest</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/EForest.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/node_modules/fortawesome/fontawesome-free/css/all.css">
+</head>
+<body>
+    <section>
+        <article>
+        </article>
+        <nav class="navbar fixed-top navbar-box navbar-expand-lg px-5">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/Index"><img class="img-fluid" src="/media/Logo_eForest.png" width="120" height="120" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="nav-action-btn d-none d-lg-block d-xl-block" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> Vizionare </a>
+
+                <div class="collapse navbar-collapse shift" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item px-5">
+                            <a class="nav-link active nav-a" aria-current="page" href="/Index"> Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/despreEForest"> Urbanism </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/CineSuntem"> Cine suntem </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/CineSuntem"> Servicii </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <div class="container-fluid w-100 m-0 p-0">
+        <main role="main" class="m-0 p-0">
+
+            <!-- MODAL CONTACT FORM -->
+            <!-- MODAL BUTTON -->
+            <section>
+                <div class="d-flex align-items-start justify-content-end m-0 p-0 modal-container">
+                    <button class="ctc-home-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <h2 id="fixed-modal-btn" class="ctc-home-btn-title py-3 text-center"> Rezerva o vizionare! </h2>
+                    </button>
+                </div>
+
+                <!-- MODAL BODY AFTER CLICK -->
+                <!-- Vertically centered scrollable modal -->
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title modal-form-title" id="exampleModalLabel">Contacteaza-ne! </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="modal-form-ctn">
+                                        <form>
+                                            <input type="email" class="email modal-form-input" required placeholder="Email">
+                                            <br />
+                                            <input type="text" class="name modal-form-input" required placeholder="Nume">
+                                            <br>
+                                            <input type="text" class="surname modal-form-input" required placeholder="Prenume">
+                                            <br>
+                                            <input type="tel" class="phone modal-form-input" placeholder="Numar de telefon">
+                                            <br>
+                                            <input type="datetime-local" class="calendar modal-form-input" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                                            <br />
+                                            <button class="register modal-form-button">
+                                                <span class="modal-form-span">Trimite! </span>
+                                            </button>
+                                        </form>
+                                        <h3 class="modal-form-msg"> Mesajul tau a fost trimis cu succes. </h3>
+                                        <div class="reg"></div>
+                                        <div class="sig"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            @RenderBody()
+        </main>
+    </div>
+
+    @*CONTACT SECTION*@
+
+    <section id="contact" class="container-fluid add-padding border-top-color ">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-6 col-md-5 text-right scrollimation fade-up d1">
+                    <h1 class="big-text"> Contact </h1>
+                    <p class="lead">Casa cu Tei Rezidential<br>Bloc D5, Calea Victoriei, București 010099</p>
+                    <p class="display-5"> +40 761 555 555 </p>
+                    <p class="display-5"> +40 760 555 555 </p>
+
+                </div>
+
+                <!-- CONTACT FORM -->
+
+                <form id="contact-form" class="col-sm-6 col-md-offset-1 scrollimation fade-left d3" action="contact.php" method="post" novalidate>
+                    <div class="form-group">
+                        <label class="control-label" for="contact-name">Nume</label>
+                        <div class="controls">
+                            <input id="contact-name" name="contactName" placeholder="Nume" class="form-control requiredField" data-new-placeholder="Your name" type="text" data-error-empty="Te rog sa introduci numele tau">
+                            <i class="fa fa-user"></i>
+                        </div>
+                    </div><!-- End name input -->
+
+                    <div class="form-group">
+                        <label class="control-label" for="contact-mail">Adresa de email</label>
+                        <div class=" controls">
+                            <input id="contact-mail" name="email" placeholder="Adresa de email" class="form-control requiredField" data-new-placeholder="Your email" type="email" data-error-empty="Te rog sa introduci adresa de email" data-error-invalid="Invalid email address">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                    </div><!-- End email input -->
+
+                    <div class="form-group">
+                        <label class="control-label" for="contact-phone">Numarul de telefon</label>
+                        <div class=" controls">
+                            <input id="contact-phone" name="phone" placeholder="Numarul de telefon" class="form-control requiredField" data-new-placeholder="Numarul de telefon" type="phone" data-error-empty="Te rog sa introduci numarul de telefon" data-error-invalid="Numarul de telefon nu este valid">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                    </div><!-- End phone input -->
+
+                    <div class="form-group">
+                        <label class="control-label" for="contact-message">Mesajul tau</label>
+                        <div class="controls">
+                            <textarea id="contact-message" name="comments" placeholder="Mesajul tau" class="form-control requiredField" data-new-placeholder="Mesajul tau" rows="6" data-error-empty="Te rog sa introduci mesajul tau"></textarea>
+                            <i class="fa fa-comment"></i>
+                        </div>
+                    </div><!-- End textarea -->
+
+                    <p><button name="submit" type="submit" class="btn btn-color2 btn-block" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Mesaj trimis"><i class="fa fa-paper-plane"></i>Trimite</button></p>
+                    <input type="hidden" name="submitted" id="submitted" value="true" />
+
+                </form><!-- End contact-form -->
+
+            </div>
+        </div>
+    </section>
+
+    @*FOOTER*@
+
+    <footer class="container-fluid footer-wrapper p-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center p-4">
+                <img class="img-fluid " height="300" width="300" src="/media/Logo_eForest.png" alt="logo eforest">
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <img class="img-fluid " height="120" width="120" src="/media/72785_Linda Giurca_V_01.png" alt="logo linda">
+            </div>
+            @*<h5 class="text-center text-white"> <i class="fa-solid fa-copyright text-white"> </i> Linda Giurca </h5>*@
+            <h6 class="text-center text-white"> All rights reserved </h6>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
